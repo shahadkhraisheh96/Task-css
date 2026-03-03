@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Icon Sidebar Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body { background-color: #f8f9fa; margin: 0; }
+
+        /* 1. SIDEBAR: Completely hidden by default (width 0) */
+        .sidebar {
+            width: 0;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #2c3e50;
+            transition: width 0.3s ease;
+            overflow: hidden;
+            white-space: nowrap;
+            z-index: 2000;
+            padding-top: 20px;
+        }
+
+        /* 2. THE HOVER LOGIC */
+        /* When hovering the menu icon OR the sidebar itself, expand it */
+        .menu-trigger:hover ~ .sidebar, 
+        .sidebar:hover {
+            width: 250px;
+        }
+
+        .sidebar .nav-link {
+            color: rgba(255,255,255,0.7);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .sidebar .nav-link i { margin-right: 15px; width: 20px; }
+
+        .sidebar .nav-link:hover {
+            color: #fff;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* 3. HEADER & TRIGGER */
+        .dashboard-header {
+            background: white;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu-trigger {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            margin-right: 20px;
+            color: #2c3e50;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            padding: 30px;
+            transition: margin-left 0.3s ease;
+        }
+
+        /* Custom Stat Card Styles */
+        .stat-card { border: none; border-radius: 12px; transition: transform 0.2s; }
+        .stat-card:hover { transform: translateY(-5px); }
+        .icon-circle {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <div class="menu-trigger">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <div class="sidebar d-flex flex-column">
+            <div class="px-4 mb-4 text-white">
+                <h5>Navigation</h5>
+            </div>
+            <a href="#" class="nav-link"><i class="fas fa-th-large"></i> Dashboard</a>
+            <a href="#" class="nav-link"><i class="fas fa-chart-line"></i> Analytics</a>
+            <a href="#" class="nav-link"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="#" class="nav-link"><i class="fas fa-cog"></i> Settings</a>
+        </div>
+        <h4 class="mb-0 fw-bold me-auto">MyDashboard</h4>
+        
+        <div class="d-flex align-items-center">
+            <input type="text" class="form-control form-control-sm border-0 bg-light me-3" placeholder="Search..." style="width: 200px;">
+            <img src="https://i.pravatar.cc/35" class="rounded-circle border" alt="User">
+        </div>
+
+    </header>
+
+    <div class="main-content">
+        <div class="row g-4 mb-4">
+            <div class="col-md-3">
+                <div class="card stat-card shadow-sm p-3">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle bg-primary bg-opacity-10 text-primary me-3"><i class="fas fa-wallet"></i></div>
+                        <div><h4 class="mb-0 fw-bold">$7,500</h4><small class="text-muted">Total Sales</small></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        <div class="card border-0 shadow-sm p-4">
+            <h5 class="fw-bold mb-4">Recent Orders</h5>
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead class="table-light">
+                        <tr><th>ID</th><th>Customer</th><th>Status</th><th>Total</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#10001</td>
+                            <td>John Doe</td>
+                            <td><span class="badge bg-success bg-opacity-10 text-success">Paid</span></td>
+                            <td class="fw-bold">$120.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
