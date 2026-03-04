@@ -2,117 +2,201 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 2</title>
-    <link rel="stylesheet" href="task2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="task2style.css">
+    <style>
+        
+    </style>
 </head>
 <body>
+    <div class="parent">
+        <div class="header">
+            <div class="logo" >
+                  <i class="fas fa-bars menu-toggle"></i>
+                  <h1>
+                    Dashboard
+                  </h1>
+            </div>
+            <div class="search-bar">
+                   <i class="fas fa-search"></i>
+                <input type="text" placeholder="     Search">
+                <img src="https://i.pravatar.cc/35" class="user-img" alt="User">
 
-    <aside class="sidebar">
-        <div class="sidebar-item active">
-            <i class="fas fa-th-large"></i>
-            <span>Dashboard</span>
+
+            </div>
+
         </div>
-        <div class="sidebar-item">
-            <i class="fas fa-chart-line"></i>
-            <span>Analytics</span>
+        <div class="sidebar">
+            <ul>
+                <li id="select">
+                 <i class="fas fa-th-large"></i>
+                 Dashboard
+                </li>
+                <li>
+                <i class="fas fa-chart-line"></i>
+                Analytics
+                </li>
+                <li>
+                 <i class="fas fa-envelope"></i>
+                 Messages
+                </li>
+                <li>
+                 <i class="fas fa-cog"></i>
+                 Settings
+                </li>
+            </ul>
+
         </div>
-        <div class="sidebar-item">
-            <i class="fas fa-envelope"></i>
-            <span>Messages</span>
+        <div class="Dashboard">
+            <h1>Dashboard</h1>
+            <div class="cards">
+                <div class="card-item">
+                    <h3>
+                   <i style="color: blue;" class="fas fa-shopping-bag"></i>
+                   &dollar;7,500
+                    </h3>
+                    <p>
+                        Total Sales
+                    </p>
+
+                </div>
+                <div class="card-item">
+                    <h3>
+                   <i style="color: green;" class="fas fa-user"></i> 1,250
+                    </h3>
+                    <p>
+                     New Users
+                    </p>
+
+                </div>
+                <div class="card-item">
+                    <h3>
+                  <i style="color:orange ;" class="fas fa-box"></i> 3,200
+                    </h3>
+                    <p>
+                      Total Order
+                    </p>
+
+                </div>
+                <div class="card-item">
+                    <h3>
+                  <i style="color: red;" class="fas fa-tools"></i> 50
+                    </h3>
+                    <p>
+                     Supports Tickets
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="sidebar-item">
-            <i class="fas fa-cog"></i>
-            <span>Settings</span>
+        <div class="Transectient">
+            <h1>
+                Transectient
+            </h1>
+            <hr>
+            <div class="cohterd">
+                <h4>Cohterd <input type="text" placeholder="chose  "> plest</h4>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Order ID
+                        </th>
+                        <th>
+                            Customer
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Total
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="order-id">
+                            #10001
+                        </td>
+                      <td class="customer-name"> 
+                         John Doe
+                        </td>
+                        <td class="status">
+                          <Button class="paid"> Paid</Button> 
+                        </td>
+                        <td class="total">
+                            &dollar; 120.00
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="order-id">
+                            #10001
+                        </td>
+                      <td class="customer-name"> 
+                         John Doe
+                        </td>
+                        <td class="status">
+                          <Button class="pending"> pending</Button> 
+                        </td>
+                        <td class="total">
+                            &dollar; 120.00
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="order-id">
+                            #10001
+                        </td>
+                      <td class="customer-name"> 
+                         John Doe
+                        </td>
+                        <td class="status">
+                          <Button class="paid"> Paid</Button> 
+                        </td>
+                        <td class="total">
+                            &dollar; 120.00
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="order-id">
+                            #10001
+                        </td>
+                      <td class="customer-name"> 
+                         John Doe
+                        </td>
+                        <td class="status">
+                          <Button class="pending"> pending</Button> 
+                        </td>
+                        <td class="total">
+                            &dollar; 120.00
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="order-id">
+                            #10001
+                        </td>
+                      <td class="customer-name"> 
+                         John Doe
+                        </td>
+                        <td class="status">
+                          <Button class="paid"> Paid</Button> 
+                        </td>
+                        <td class="total">
+                            &dollar; 120.00
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="page-number">
+                Previous <input type="number" placeholder="1"> Next 
+            </div>
         </div>
-    </aside>
-    <main class="main-content">
-        
-        <header class="dashboard-header">
-            <div class="header-left">
-                <i class="fas fa-bars menu-toggle"></i>
-                <h2>Dashboard</h2>
-            </div>
-            <div class="header-right">
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search">
-                </div>
-                <img src="https://via.placeholder.com/35" alt="User" class="user-avatar">
-            </div>
-        </header>
 
-        <section class="stats-container">
-            <div class="stat-card">
-                <div class="icon-box blue"><i class="fas fa-shopping-bag"></i></div>
-                <div class="stat-info">
-                    <h3>$7,500</h3>
-                    <p>Total Sales</p>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="icon-box green"><i class="fas fa-user"></i></div>
-                <div class="stat-info">
-                    <h3>1,250</h3>
-                    <p>New Users</p>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="icon-box orange"><i class="fas fa-box"></i></div>
-                <div class="stat-info">
-                    <h3><3,200/h3>
-                    <p>Total Orders</p>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="icon-box red"><i class="fas fa-tools"></i></div>
-                <div class="stat-info">
-                    <h3>50</h3>
-                    <p>Support Tickets</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="table-section">
-            <div class="table-header">
-                <h3>Transactions</h3>
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Order ID</th>
-                            <th>Customer</th>
-                            <th>Status</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#10001</td>
-                            <td>John Doe</td>
-                            <td><span class="badge paid">Paid</span></td>
-                            <td>$120.00</td>
-                        </tr>
-                        <tr>
-                            <td>#10002</td>
-                            <td>Jane Smith</td>
-                            <td><span class="badge pending">Pending</span></td>
-                            <td>$75.00</td>
-                        </tr>
-                        <tr>
-                            <td>#10003</td>
-                            <td>Mike Johnson</td>
-                            <td><span class="badge paid">Paid</span></td>
-                            <td>$45.00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-    </main>
-
+    </div>
+    
 </body>
 </html>

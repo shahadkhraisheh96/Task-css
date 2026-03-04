@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+}
+body{
+
+}
+.parent {
+display: grid;
+height: 100vh;
+grid-template-columns: 240px 1fr;
+grid-template-rows: 70px 240px 1fr;
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+background-color: white;
+}
+/*header*/
+.header {
+     grid-area: 1 / 1 / 2 / 4; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     display: flex;
+     justify-content: space-between;
+     position: static;
+}
+.header .logo{
+    display: flex;
+    gap: 15px;
+    margin: 10px;
+
+}
+.header .logo h1{
+    width: 20px;
+    color: navy;
+}
+.header .logo i{
+    font-size: 20px;
+    margin-top: 10px;
+    color: navy;
+}
+.header .search-bar{
+    gap: 10px;
+    display:inline-flex;
+    height: 40px;
+    margin: 20px;
+}
+.header .search-bar input{
+    border: solid gray 1pt; 
+    background: transparent; 
+    margin-left: 10px; 
+    width: 200px;
+    height: 35px;
+}
+.header .search-bar .user-img{
+    border-radius: 360px;
+    margin-top: -5px;
+}
+.header .search-bar i{
+ margin-top: 10px;
+ margin-right: -40px;
+ color: #989898;
+}
+/*sidebar*/
+
+.sidebar { 
+    grid-area: 2 / 1 / 4 / 2;
+    border: 2px solid;
+    background-color: #34495e;
+    color: white;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 100;
+    margin-top: -9px;
+    padding-top: 10px;
+
+}
+.sidebar ul{
+    padding: 10px;
+    justify-content: center;
+
+}
+.sidebar ul li{
+    list-style: none;
+    margin-bottom: 20px;
+ padding: 20px;
+ width: 180px;
+}
+#select{
+    background-color: #566879;
+}
+#select i{
+    color: #6543ea;
+}
+
+/*Dashboard*/
+.Dashboard {
+    grid-area: 2 / 2 / 3 / 4;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.Dashboard h1{
+    margin: 20px 0 0 20px;
+}
+.Dashboard .cards{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+
+}
+.Dashboard .card-item{
+    margin: 0 30px;
+    padding: 10px;
+    width: 190px;
+    height: 100px;
+    text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.Dashboard .card-item h3{
+    font-size: 25px;
+    margin: 30px 30px 0 30px;
+
+}
+.Dashboard .card-item p{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 45px;
+
+}
+
+
+/*Transectient*/
+.Transectient { 
+    grid-area: 3 / 2 / 4 / 4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.Transectient .cohterd{
+    margin: 20px;
+    font-weight: normal;
+}
+.Transectient .cohterd input{
+    width:60px;
+}
+.Transectient table{
+    align-items: center;
+    border: 1px solid ;
+     width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    text-align: center;
+    height: 50vh;
+}
+.Transectient table thead{
+    background-color: #efeff0;
+    padding: 20px;
+    width: 70px;
+    height: 50px;
+    border-bottom: 1px solid gainsboro;
+}
+.Transectient table tr{
+    border-bottom:1px solid gainsboro ;
+}
+.Transectient table .status  .paid{
+    background-color: rgb(35, 194, 35);
+    border:rgb(35, 194, 35) ;
+    border-radius: 3px;
+    width: 70px;
+    height: 30px;
+
+
+}
+.Transectient table .status  .pending{
+   
+    background-color:orange;
+    border:orange ;
+    border-radius: 3px;
+    width: 90px;
+    height: 30px;
+
+
+}
+.Transectient .page-number{
+    text-align: center;
+    padding: 10px;
+}
+.Transectient .page-number input{
+width:70px;
+
+}
+
+
