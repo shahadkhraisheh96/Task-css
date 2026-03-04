@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <title>Task 4</title>
+        <style>
+            *{
+                
+                margin: 0;
+                padding: 0;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            body{
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(110, 165, 255);
+
+                
+            }
+            section{
+                background-color: rgb(255, 255, 255);
+                padding: 30px;
+                width: 60%;
+                max-width: 450px;
+                text-align: left;
+
+            }
+            .sign-up{
+                padding: 15px;
+            }
+            .sign-up p{
+                color: gray;
+            }
+            .sign-up .name-input{
+                display: grid;
+            grid-template-columns: 1fr 1fr;
+           justify-content: left;
+            margin-bottom: 15px;
+     
+            }
+            .sign-up .name-input input{
+                width: 150px;
+                  margin-left: 20px;
+                padding: 10px;
+
+
+            }
+            .sign-up .input-group{
+                margin: 20px;
+                width: 330px;
+                text-align: left;
+            
+            }
+           .sign-up .input-group input{
+            width: 400px;
+            padding: 10px;
+        }
+        .check {
+  display: flex;
+            align-items: left;
+            justify-content: left;
+
+            font-size: 13px;
+            margin: 20px 20px;
+            gap: 8px;            
+          
+         }
+         .btn button {
+            width:150px;
+            height: 40px;
+            background-color:rgb(110, 165, 255) ;
+            border-color:rgb(110, 165, 255) ;
+            color:white;
+            border-radius: 2px;
+            margin-left: 15px;
+         }
+         a{
+            text-decoration: none;
+            color:rgb(110, 165, 255) ;
+            font-weight: bolder;
+         }
+         @media (max-width: 992px) {
+            body{
+                 min-height: 100vh;
+            }
+
+
+         }
+          @media (max-width: 576px) {
+            body{
+                 min-height: 100vh;
+            }
+
+           .sign-up .input-group input{
+                width:230px;
+            }
+             .sign-up .name-input input{
+                width: 100px;
+             }
+
+
+
+
+         }
+
+
+         
+
+
+
+        </style>
+</head>
+<body>
+   <section>
+    <div class="sign-up">
+        <h1>
+            Sign Up
+        </h1>
+        <p>
+            please fill in this from to create an account
+        </p>
+        <hr>
+        <form>
+            <div class="name-input">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="input-group">
+               <input type="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+            <input type="password" placeholder="password">
+            </div>
+            <div class="input-group">
+            <input type="password" placeholder="Confirm password">
+             </div>
+             <div class="check">
+            <label >
+                <input type="checkbox"> I accept the <a href="#">Terms of Use </a>&<a href="#">Privacy Policy</a>
+
+            </label>
+            </div>
+            <div class="btn">
+            <button type="submit">Sign Up</button>
+            </div>
+        </form>
+
+    </div>
+   
+   </section>
+ 
+</body>
+</html>

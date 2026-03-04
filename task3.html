@@ -16,8 +16,7 @@
 
         body { background-color: #f4f7f6; margin: 0; font-family: 'Segoe UI', sans-serif; }
 
-        /* --- THE SIDEBAR (Hidden by default) --- */
-        .sidebar {
+\        .sidebar {
             width: 0;
             height: 100vh;
             position: fixed;
@@ -28,12 +27,10 @@
             overflow: hidden;
             white-space: nowrap;
             z-index: 2000;
-            padding-top: 80px; /* Space for the header */
+            padding-top: 80px; 
         }
 
-        /* --- THE TRIGGER LOGIC --- */
-        /* If the icon in the header is hovered, OR the sidebar itself is hovered */
-        .sidebar-trigger:hover ~ .sidebar, 
+         .sidebar-trigger:hover ~ .sidebar, 
         .sidebar:hover {
             width: var(--sidebar-width);
         }
@@ -58,7 +55,6 @@
             margin-right: 15px;
         }
 
-        /* --- THE HEADER --- */
         header {
             background: white;
             height: 70px;
@@ -81,13 +77,12 @@
 
         .sidebar-trigger:hover { color: #0d6efd; }
 
-        /* --- MAIN CONTENT --- */
         .main-content {
             padding: 30px;
             transition: opacity 0.3s;
         }
 
-        /* Visual styling for cards */
+   
         .stat-card {
             border: none;
             border-radius: 12px;
@@ -103,7 +98,6 @@
             justify-content: center;
         }
 
-        /* Custom Table Status Badges */
         .status-paid { background: #d1e7dd; color: #0f5132; }
         .status-pending { background: #fff3cd; color: #664d03; }
 
