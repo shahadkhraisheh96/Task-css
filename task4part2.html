@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Task3part4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+
+        }
+        header{
+            background-color: rgb(9, 9, 64);
+            display: flex;
+            margin: 0;
+            justify-content: space-between;
+            padding: 10px;
+
+
+        }
+        header .logo{
+            color: brown;text-align: left;
+            
+        }
+        header .menu{
+            display: inline;
+        }
+        header .menu ul{
+            display: flex;
+            padding: 6px;
+        }
+
+        header .menu ul li{
+           list-style: none;
+           margin-right: 10px;
+           color: white;
+        }
+        main{
+            display: block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+        main .Contact-us{
+            margin-bottom: 90px;
+
+        }
+      .Contact-us h1{
+            font-size: 70px;
+         }
+         .Contact-us p{
+            font-size: 12px;
+         }
+         main .help {
+            margin-bottom: 90px;
+         }
+          main .help p{
+            text-align:center;
+            margin-left: -430PX;
+          
+            font-size: 14px;
+  
+          }
+         main .help input{
+            width: 600px;
+            height: 40px;
+         }
+         .Partnerships p{
+            font-weight: bold;
+            color: rgb(9, 9, 64);
+
+         }
+         footer{
+            background-color: beige;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color:rgb(9, 9, 64) ;
+         }
+          @media (max-width: 992px) {
+            body{
+                 min-height: 100vh;
+            }
+
+
+         }
+          @media (max-width: 576px) {
+             header{
+                width: 630px;
+             }
+              main .help p{
+            text-align:center;
+            margin-left: -120PX;
+          
+            font-size: 14px;
+  
+          }
+         main .help input{
+            width: 300px;
+            height: 40px;
+         }
+
+          footer{
+            position: absolute;
+            margin-bottom: -80px;
+            bottom: 0;
+            width: 630px;
+          }
+          main{
+            margin: 60px;
+          }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            DOLLAR SHAVE CLUB
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    shop
+                </li>
+                <li>
+                Original Content</li>
+                <li>
+                    Gift
+                </li>
+                <li>
+                    Account
+                </li>
+                <li>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="Contact-us">
+            <h1>
+                Contact Us
+            </h1>
+            <p>
+                Question not answered yet ? We are here to help!
+            </p>
+        </div>
+        <div class="help">
+            <p>
+                How can we help you today?
+            </p>
+            <input type="text">
+        </div>
+        <div class="Partnerships">
+            <p>
+                Partnerships and Media Inquiries
+            </p>
+        </div>
+    </main>
+    <footer>
+        <h3>
+            Questions not answered?
+        </h3>
+        <p>
+            Contact us >
+        </p>
+    </footer>
+    
+</body>
+</html>
