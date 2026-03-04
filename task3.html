@@ -3,231 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 3</title>
+    <title>Tast 3</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root {
-            --sidebar-bg: #2c3e50;
-            --sidebar-width: 250px;
-            --transition-speed: 0.3s;
-        }
-
-        body { background-color: #f4f7f6; margin: 0; font-family: 'Segoe UI', sans-serif; }
-
-\        .sidebar {
-            width: 0;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: var(--sidebar-bg);
-            transition: width var(--transition-speed) ease;
-            overflow: hidden;
-            white-space: nowrap;
-            z-index: 2000;
-            padding-top: 80px; 
-        }
-
-         .sidebar-trigger:hover ~ .sidebar, 
-        .sidebar:hover {
-            width: var(--sidebar-width);
-        }
-
-        .sidebar a {
-            display: flex;
-            align-items: center;
-            padding: 15px 25px;
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .sidebar a:hover {
-            background: rgba(255,255,255,0.1);
+        body { background-color: #f8f9fa; }
+        .sidebar {
+            min-height: 100vh;
+            background-color: #34495e;
             color: white;
         }
-
-        .sidebar i {
-            min-width: 30px;
-            font-size: 1.1rem;
-            margin-right: 15px;
+        .sidebar .nav-link {
+            color: white;
+            padding: 15px 20px;
+            margin: 5px 10px;
+            border-radius: 5px;
+        }
+        .sidebar .nav-link.active {
+            background-color: #566879;
+        }
+        .sidebar .nav-link.active i {
+            color: #6543ea;
+        }
+      
+        .custom-shadow {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        header {
-            background: white;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            padding: 0 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .sidebar-trigger {
-            font-size: 22px;
-            cursor: pointer;
-            padding: 10px;
-            color: #333;
-            transition: color 0.2s;
-        }
-
-        .sidebar-trigger:hover { color: #0d6efd; }
-
-        .main-content {
-            padding: 30px;
-            transition: opacity 0.3s;
-        }
-
-   
-        .stat-card {
+        .status-btn {
+            width: 80px;
             border: none;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-radius: 4px;
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.9rem;
         }
-
-        .icon-box {
-            width: 45px;
-            height: 45px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .status-paid { background: #d1e7dd; color: #0f5132; }
-        .status-pending { background: #fff3cd; color: #664d03; }
-
+        .paid { background-color: #23c223; }
+        .pending { background-color: orange; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="sidebar-trigger">
-            <i class="fas fa-bars"></i>
-        </div>
-
-        <h4 class="mb-0 fw-bold ms-2">Dashboard</h4>
-
-        <div class="sidebar">
-            <a href="#"><i class="fas fa-home"></i> Dashboard</a>
-            <a href="#"><i class="fas fa-chart-pie"></i> Analytics</a>
-            <a href="#"><i class="fas fa-wallet"></i> Payments</a>
-            <a href="#"><i class="fas fa-user-friends"></i> Customers</a>
-            <a href="#"><i class="fas fa-cog"></i> Settings</a>
-        </div>
-
-        <div class="ms-auto d-flex align-items-center">
-            <div class="input-group input-group-sm me-3 d-none d-md-flex">
-                <input type="text" class="form-control border-0 bg-light" placeholder="Search...">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white custom-shadow sticky-top py-3">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-bars me-3 text-primary fs-4"></i>
+                <h4 class="mb-0 text-primary fw-bold">Dashboard</h4>
             </div>
-            <img src="https://i.pravatar.cc/35" class="rounded-circle border" alt="User">
+            
+            <div class="d-flex align-items-center gap-3">
+                <div class="input-group">
+                    <span class="input-group-text bg-transparent border-end-0">
+                        <i class="fas fa-search text-muted"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0" placeholder="Search">
+                </div>
+                <img src="https://i.pravatar.cc/35" class="rounded-circle border" alt="User">
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="main-content container-fluid">
-        
-        <div class="row g-4 mb-4">
-            <div class="col-md-3">
-                <div class="card stat-card p-3">
-                    <div class="d-flex align-items-center">
-                        <div class="icon-box bg-primary bg-opacity-10 text-primary me-3"><i class="fas fa-dollar-sign"></i></div>
-                        <div><h4 class="mb-0 fw-bold">$12,450</h4><small class="text-muted">Revenue</small></div>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar px-0">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fas fa-th-large me-2"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-chart-line me-2"></i> Analytics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-envelope me-2"></i> Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-cog me-2"></i> Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-10 ms-sm-auto px-md-4">
+                
+                <div class="pt-4 pb-2 mb-3">
+                    <h2 class="h4">Dashboard</h2>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="card border-0 custom-shadow p-3 text-center">
+                            <h3 class="fw-bold"><i class="fas fa-shopping-bag text-primary me-2"></i>$7,500</h3>
+                            <p class="text-muted mb-0">Total Sales</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="card border-0 custom-shadow p-3 text-center">
+                            <h3 class="fw-bold"><i class="fas fa-user text-success me-2"></i>1,250</h3>
+                            <p class="text-muted mb-0">New Users</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="card border-0 custom-shadow p-3 text-center">
+                            <h3 class="fw-bold"><i class="fas fa-box text-warning me-2"></i>3,200</h3>
+                            <p class="text-muted mb-0">Total Order</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="card border-0 custom-shadow p-3 text-center">
+                            <h3 class="fw-bold"><i class="fas fa-tools text-danger me-2"></i>50</h3>
+                            <p class="text-muted mb-0">Support Tickets</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card stat-card p-3">
-                    <div class="d-flex align-items-center">
-                        <div class="icon-box bg-success bg-opacity-10 text-success me-3"><i class="fas fa-shopping-cart"></i></div>
-                        <div><h4 class="mb-0">432</h4><small class="text-muted">Orders</small></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card stat-card p-3">
-                    <div class="d-flex align-items-center">
-                        <div class="icon-box bg-warning bg-opacity-10 text-warning me-3"><i class="fas fa-users"></i></div>
-                        <div><h4 class="mb-0">890</h4><small class="text-muted">Users</small></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card stat-card p-3">
-                    <div class="d-flex align-items-center">
-                        <div class="icon-box bg-danger bg-opacity-10 text-danger me-3"><i class="fas fa-exclamation-triangle"></i></div>
-                        <div><h4 class="mb-0">12</h4><small class="text-muted">Alerts</small></div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="card stat-card p-4">
-            <h5 class="fw-bold mb-4">Recent Transactions</h5>
-            <div class="table-responsive">
-                <table class="table align-middle">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Order ID</th>
-                            <th>Customer</th>
-                            <th>Status</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="fw-bold">#ORD-772</td>
-                            <td>Alice Johnson</td>
-                            <td><span class="badge status-paid">Paid</span></td>
-                            <td>Mar 03, 2026</td>
-                            <td class="fw-bold">$240.00</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold">#ORD-771</td>
-                            <td>Bob Smith</td>
-                            <td><span class="badge status-pending">Pending</span></td>
-                            <td>Mar 02, 2026</td>
-                            <td class="fw-bold">$115.00</td>
-                        </tr>
-                         <tr>
-                            <td class="fw-bold">#ORD-772</td>
-                            <td>Alice Johnson</td>
-                            <td><span class="badge status-paid">Paid</span></td>
-                            <td>Mar 03, 2026</td>
-                            <td class="fw-bold">$240.00</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold">#ORD-771</td>
-                            <td>Bob Smith</td>
-                            <td><span class="badge status-pending">Pending</span></td>
-                            <td>Mar 02, 2026</td>
-                            <td class="fw-bold">$115.00</td>
-                        </tr>
-                         <tr>
-                            <td class="fw-bold">#ORD-772</td>
-                            <td>Alice Johnson</td>
-                            <td><span class="badge status-paid">Paid</span></td>
-                            <td>Mar 03, 2026</td>
-                            <td class="fw-bold">$240.00</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold">#ORD-771</td>
-                            <td>Bob Smith</td>
-                            <td><span class="badge status-pending">Pending</span></td>
-                            <td>Mar 02, 2026</td>
-                            <td class="fw-bold">$115.00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                <div class="card border-1 custom-shadow p-4 mb-5">
+                    <h2 class="h4 mb-4">Transactions</h2>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Cohterd</label>
+                        <input type="text" class="form-control d-inline-block w-auto mx-2" placeholder="Choose">
+                        <span>plest</span>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="table  align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Status</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#10001</td>
+                                    <td>John Doe</td>
+                                    <td><button class="status-btn paid  text-center">Paid</button></td>
+                                    <td class="fw-bold">&dollar;120.00</td>
+                                </tr>
+                                <tr>
+                                    <td>#10002</td>
+                                    <td>Jane Smith</td>
+                                    <td><button class="status-btn pending text-center">Pending</button></td>
+                                    <td class="fw-bold"> &dollar; 75.00</td>
+                                </tr>
+                                <tr>
+                                    <td>#10003</td>
+                                    <td>John Doe</td>
+                                    <td><button class="status-btn paid text-center">Paid</button></td>
+                                    <td class="fw-bold">&dollar;45.00</td>
+                                </tr>
+                                 <tr>
+                                    <td>#10004</td>
+                                    <td>Jane Smith</td>
+                                    <td><button class="status-btn pending text-center">Pending</button></td>
+                                    <td class="fw-bold"> &dollar; 200.00</td>
+                                </tr>
 
+                                <tr>
+                                    <td>#10005</td>
+                                    <td>John Doe</td>
+                                    <td><button class="status-btn paid  text-center">Paid</button></td>
+                                    <td class="fw-bold">  &dollar; 99.00</td>
+                                </tr>
+                                </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center mt-4 gap-2">
+                        Previous
+                        <input type="number" class="form-control form-control-sm text-center" style="width: 50px;" value="1">
+                     Next
+                    </div>
+                </div>
+
+            </main>
+        </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
